@@ -1,0 +1,123 @@
+/* preset */
+/* div are block level elements */
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#menu-container{
+    height: 20px;
+    border: 1px solid;
+    display: flex;
+    width: 90px;
+    justify-content: space-around;
+}
+
+#menu-option-container{
+    height: 60px;
+    border: 1px solid rebeccapurple;
+}
+
+.menu{
+
+}
+.menu-options{
+    display: none; /* It will hode */
+    justify-content: space-evenly;
+    width: 265px;
+}
+
+.menu-options.active{
+    display: flex;
+}
+
+.f-row{
+    display: flex;
+}
+
+.formatting-col{
+
+}
+
+.style-buttons{
+
+}
+
+.colors{
+
+}
+
+#formula-container{
+    height: 30px;
+    border: 1px solid;;
+}
+
+#cell-container{
+    height: calc(100vh - 130px);
+    background-color: white;
+    overflow: auto;
+    position: relative;
+}
+
+#sheets{
+    height: 20px;
+    border: 1px solid red;
+}
+
+.cell{
+    border: 0.2px solid;
+    height: 25px;
+    /*width: 91px; */
+    text-align: center;
+   /* min-width: 85px; */
+    border-radius: 1px;
+}
+
+#top-row .cell,#grid .cell{
+    min-width: 85px;
+    max-width: 85px;
+}
+
+.row{
+    display: flex;
+}
+
+#tl-cell{  /*It is for top-left cell*/
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    z-index: 3; /* z-index basicallyprevent the overlapping while scrolling */
+}
+
+#top-row{
+display: flex;
+position: absolute;
+left: 25px;
+top: 0px;
+z-index: 2;
+}
+
+#top-row .cell{
+    background-color: rgb(175, 172, 172);
+}
+
+#left-col .cell{
+    width:25px;
+    background-color: rgb(179, 176, 176);
+}
+
+#left-col{
+    position: absolute;
+    top: 25px;
+    z-index: 2;
+}
+
+#grid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
