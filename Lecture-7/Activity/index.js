@@ -218,6 +218,23 @@ $(document).ready(function(){
         }
     }
 
+    function removeFormula(cellObject, caddress)
+    {
+        //remove yourself from parent
+        for(let i = 0; i < cellObject.parent.length; i++)
+        {
+            let parentAddr = cellObject.parent[i];
+            let {rowId, colId} = getRCfromAddress(parentAddr);
+            let pObject = db[rowId][colId];
+            let newArr = pObject.children.filter(function (elem){
+                return elem != caddress;
+            })
+            pObject.children = newArr;
+        }
+        cellObject.parent = [];
+        cellObject.formula = "";
+    }
+
 
     function getRCfromAddress(address)
     {
